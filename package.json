@@ -6,13 +6,15 @@
   "author": "LuisKlopp <fbgus333@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "eslint-config-react-app": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "scripts": {
     "dev": "webpack-dev-server --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js",
-    "start": "npm run dev -- --open"
+    "start": "npm run dev -- --open",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
