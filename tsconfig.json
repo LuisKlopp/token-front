@@ -1,24 +1,35 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
     "target": "es5",
-    "module": "esnext",
+    "lib": ["dom", "ES2015"],
     "jsx": "react-jsx",
-    "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "jsxImportSource": "@emotion/react",
+    "baseUrl": "./src",
+    "typeRoots": ["./node_modules/@types", "src/@types"],
     "paths": {
-      "@/*": ["src/*"]
-    }
+      "@assets/*": ["assets/*"],
+      "@libs/*": ["app/libs/*"],
+      "@components": ["app/components"],
+      "@elements": ["app/elements"],
+      "@hooks": ["app/hooks"],
+      "@screens": ["app/screens"],
+      "@routes": ["app/routes"],
+      "@models": ["app/models"],
+      "@configs": ["app/configs"],
+      "@repositories": ["app/repositories"]
+    },
+    "outDir": "./dist"
   },
-  "include": ["src"]
+  "include": ["./"],
+  "exclude": ["node_modules"]
 }
